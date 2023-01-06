@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {signUp,readUsers,updateUser,deleteUser,loginUser} = require("../db/controllers/userController")
+const {signUp,readUsers,updateUser,deleteUser,loginUser} = require("../controllers/userController")
 
 const {hashPass,validatePassword,validateEmail,comparePass,tokenCheck} = require("../middleware/validators")
 

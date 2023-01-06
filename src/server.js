@@ -1,5 +1,5 @@
 console.log("index.js")
-require("./src/db/connection");
+require("./db/connection");
 
 const express=require("express");
 const cors = require('cors')
@@ -10,8 +10,8 @@ app.use(express.json());
 
 
 //import routes
-const userRoutes = require("./src/routes/userRoutes");
-const subjectRoutes = require("./src/routes/subjectRoutes");
+const userRoutes = require("./routes/userRoutes");
+const subjectRoutes = require("./routes/subjectRoutes");
 
 //routes middleware
 app.use("/api",userRoutes)
