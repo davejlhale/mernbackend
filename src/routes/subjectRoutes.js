@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {createSubject,readSubjects,updateSubjects,deleteSubject} = require("../controllers/subjectController")
+const {createSubject,readSubjects,updateSubjects,deleteSubject} = require("../../controllers/subjectController")
 
 console.log("subject")
 

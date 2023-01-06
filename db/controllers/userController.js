@@ -1,5 +1,5 @@
-const User = require("../src/models/User");
-const Subject = require("../src/models/Subject");
+const User = require("../../models/User");
+const Subject = require("../../models/Subject");
 const mongoose = require("mongoose")
 const jwt = require("jsonwebtoken")
 

@@ -1,4 +1,4 @@
-const Subject = require("../src/models/Subject");
+const Subject = require("../../models/Subject");
 
 
 exports.readSubjects = async (req, res, next) => {

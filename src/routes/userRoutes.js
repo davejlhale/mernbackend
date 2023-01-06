@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {signUp,readUsers,updateUser,deleteUser,loginUser} = require("../controllers/userController")
+const {signUp,readUsers,updateUser,deleteUser,loginUser} = require("../db/controllers/userController")
 
-const {hashPass,validatePassword,validateEmail,comparePass,tokenCheck} = require("../src/middleware/validators")
+const {hashPass,validatePassword,validateEmail,comparePass,tokenCheck} = require("../middleware/validators")
 
 
 router.post('/signup',validatePassword,validateEmail,hashPass, signUp);

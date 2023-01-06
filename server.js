@@ -1,5 +1,5 @@
 console.log("index.js")
-require("./db/connection");
+require("./src/db/connection");
 
 const express=require("express");
 const cors = require('cors')
@@ -10,12 +10,13 @@ app.use(express.json());
 
 
 //import routes
-const userRoutes = require("./routes/userRoutes");
-const subjectRoutes = require("./routes/subjectRoutes");
+const userRoutes = require("./src/routes/userRoutes");
+const subjectRoutes = require("./src/routes/subjectRoutes");
 
 //routes middleware
 app.use("/api",userRoutes)
 
+//deploy healthcheck endpoint
 app.get("/health",(req,res)=> {
     res.status(200).send({message:"api is working"});
 })
