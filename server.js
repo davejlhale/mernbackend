@@ -16,6 +16,9 @@ const subjectRoutes = require("./routes/subjectRoutes");
 //routes middleware
 app.use("/api",userRoutes)
 
+app.get("/health",(req,res)=> {
+    res.status(200).send({message:"api is working"});
+})
 
 app.use("/api",subjectRoutes)
 app.listen(port ,() => {
